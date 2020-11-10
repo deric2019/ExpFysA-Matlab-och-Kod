@@ -24,7 +24,6 @@ locs_10 = locs(1:5:size(locs)-mod(size(locs,1),10));
 [A0,I] = max(y);
 
 fun = @(b,t) b(1).*A0.*exp(-b(1).*t)./(b(2).*A0.*(1-exp(-b(1).*t))+b(1));
-% fun = @(b,t) A0.*exp(-b(1).*t)./(1+b(2).*(1-exp(-b(1).*t)));
 
 x0 = [1e-05 1e-08]; % Initial guess (found by trial and error)
 
